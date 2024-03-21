@@ -1,0 +1,59 @@
+.buttons {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    
+    &__item {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 8px;
+
+        transition: background-color 0.1s;
+
+        &_done {
+            background-color: #5eac24;
+
+            &:hover {
+                background-color: #53971e;
+            }
+
+            &:active {
+                background-color: #4c8c1b;
+            }
+        }
+
+        &_delete {
+            background-color: #f44336;
+            
+            &:hover {
+                background-color: #dc3b2f;
+            }
+
+            &:active {
+                background-color: #cf3429;
+            }
+        }
+
+        &_add {
+            background-color: #2196f3;
+            width: 45px;
+            height: 45px;
+
+            &:hover {
+                background-color: #1f86da;
+            }
+
+            &:active {
+                background-color: #1e7ecd;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+
+        pointer-events: none; 
+     }
+}

@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    
+    &__group {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        row-gap: 15px;
+    }
+
+    &__input {
+        box-shadow: inset 0px 0px 3px 0px #000;
+        padding: 10px;
+        font-size: 1.25rem;
+    }
+}

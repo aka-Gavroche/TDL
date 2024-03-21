@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG\favicon.ico">
+    <link rel="stylesheet" href="CSS/main-style.css">
+    <title>TDL - Ваш список справ</title>
+</head>
+<body>
+    <div class="main-wrapper" data-simplebar>
+        <!-----HEADER----->
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__title-wrapper">
+                        <img class="header__img" src="IMG/Logo.png" alt="img">
+                        <h1 class="header__title">TDL</h1>
+                    </div>
+                    <h2 class="header__subtitle">Список справ на сьогодні</h2>
+                </div>
+            </div>
+        </header>
+
+        <!-----MAIN----->
+        <main class="main">
+            <!-----СПИСОК ЗАВДАНЬ----->
+            <section class="section">
+                <div class="container">
+                    <ul id="tasksList" class="task-list task-list_empty">
+
+                        <!-- <li id="emptyList" class="task list__item task-list__item_empty">
+                            <img src="./IMG/list-checked.png" alt="Empty">
+                            <div class="task-list__title_empty">Список завдань пустий</div>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-----ФОРМА----->
+            <section class="section">
+                <div class="container">
+                   <div class="form-block">
+                        <h3 class="form-block__title">Додати нове завдання</h3>
+                        <div class="form-block__body">
+                            <form id="form" class="form">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" id="taskInput" placeholder="Текст задачі" required>
+                                    <!-- <small id="emailHelp" class="form__text form__text_muted">Ціль. Час. Очікуваний результат</small> -->
+                                </div>
+                                <button type="submit" class="buttons__item buttons__item_add">
+                                    <img class="buttons__img" src="./IMG/add.png" alt="Add">
+                                </button>
+                            </form>
+                        </div>  
+                   </div>
+                </div>
+            </section>
+        </main>
+
+        <!-----FOOTER----->
+        <footer class="footer">
+            <div class="footer__copyright">@ a.k.a.Gavroche | 2024 | ©  All Rights Reserved</div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>

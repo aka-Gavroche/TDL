@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*Файл обнулення стилів за замовчуванням*/
+/*Видаляємо всі відступи і межі*/
+/*Зірочка означає застосування даних параметрів до всіх-всіх тегів html-сторінки*/
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Condensed&display=swap");
+* {
+  padding: 0; /*внутрішній відступ*/
+  margin: 0; /*Зовнішній відступ*/
+  border: 0; /*межа-контур*/
+}
+
+/*Згідно зі специфікацією CSS ширина блоку складається з ширини контенту (width), значень відступів (margin), полів (padding) і кордонів (border).*/
+/*Аналогічно йде і з висотою блоку.*/
+/*box-sizing дозволяє змінити цей алгоритм, щоб властивості width і height задавали розміри не контента, а розміри блоку.*/
+/*:before і :after - псевдоелементи, які дають можливість відображати бажаний контент до/після вмісту елемента, до якого він додається.*/
+*, *:before, :after {
+  box-sizing: border-box; /*застосовується для зміни алгоритма розрахунку ширини і висоти елемента*/
+  -moz-box-sizing: border-box; /*Те саме для Firefox*/
+  -webkit-box-sizing: border-box; /*Safari до версії 5.0, Chrome до версії 10.0, Android до версії 4.0 і iOS Safari до версії 5.0*/
+}
+
+/*Видаляємо лінії обводки у деяких браузерів*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*Робимо вказані нижче теги блочними*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Урівнюємо поведінку шрифтів та елементів для різних браузерів*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*псевдоелемент, котрий видаляє хрестик із форми вводу у браузері Internet Explorer*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+/*Псевдоелемент, котрий видаляє лишні відступи і пропуски у браузері Firefox*/
+/*В даному випадку застосований до кнопки*/
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+:root {
+  --block-box-shadow: 0px 0px 4px 0px #000;
+}
+
+body {
+  font-family: "Scada", sans-serif;
+}
+
+.none {
+  display: none !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 15px 0;
+}
+
+.section {
+  width: 100%;
+}
+
+.main-wrapper {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.header {
+  width: 100%;
+  font-family: "Alumni Sans", sans-serif;
+}
+.header__wrapper {
+  padding: 25px 0px;
+}
+.header__title-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.header__img {
+  max-width: 100%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.header__title {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 5rem;
+}
+.header__subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.task-list {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: var(--block-box-shadow);
+  overflow-y: auto;
+}
+.task-list__item {
+  width: 100%;
+  padding: 8px 15px;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+.task-list__item_empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+.task-list__item_empty img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.task-list__title {
+  font-size: 1.3rem;
+  line-height: normal;
+  overflow: hidden;
+}
+.task-list__title_empty {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Alumni Sans", sans-serif;
+  text-align: center;
+}
+.task-list__title_done {
+  text-decoration: line-through;
+  color: #a4a4a4;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+.buttons__item {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 8px;
+  transition: background-color 0.1s;
+}
+.buttons__item_done {
+  background-color: #5eac24;
+}
+.buttons__item_done:hover {
+  background-color: #53971e;
+}
+.buttons__item_done:active {
+  background-color: #4c8c1b;
+}
+.buttons__item_delete {
+  background-color: #f44336;
+}
+.buttons__item_delete:hover {
+  background-color: #dc3b2f;
+}
+.buttons__item_delete:active {
+  background-color: #cf3429;
+}
+.buttons__item_add {
+  background-color: #2196f3;
+  width: 45px;
+  height: 45px;
+}
+.buttons__item_add:hover {
+  background-color: #1f86da;
+}
+.buttons__item_add:active {
+  background-color: #1e7ecd;
+}
+.buttons__img {
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.form-block {
+  padding: 30px;
+  width: min(100%, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  margin: 0 auto;
+  box-shadow: var(--block-box-shadow);
+}
+.form-block__title {
+  font-size: 1.5rem;
+  width: 100%;
+}
+.form-block__body {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 15px;
+}
+.form__input {
+  box-shadow: inset 0px 0px 3px 0px #000;
+  padding: 10px;
+  font-size: 1.25rem;
+}
+
+.footer {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  font-size: 0.875rem;
+}/*# sourceMappingURL=main-style.css.map */

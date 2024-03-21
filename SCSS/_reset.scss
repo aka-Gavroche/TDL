@@ -1,0 +1,66 @@
+/*Файл обнулення стилів за замовчуванням*/
+
+/*Видаляємо всі відступи і межі*/
+/*Зірочка означає застосування даних параметрів до всіх-всіх тегів html-сторінки*/
+
+*{
+    padding: 0;      /*внутрішній відступ*/
+    margin: 0;       /*Зовнішній відступ*/
+    border: 0;       /*межа-контур*/
+}
+
+/*Згідно зі специфікацією CSS ширина блоку складається з ширини контенту (width), значень відступів (margin), полів (padding) і кордонів (border).*/
+/*Аналогічно йде і з висотою блоку.*/
+/*box-sizing дозволяє змінити цей алгоритм, щоб властивості width і height задавали розміри не контента, а розміри блоку.*/
+/*:before і :after - псевдоелементи, які дають можливість відображати бажаний контент до/після вмісту елемента, до якого він додається.*/
+*,*:before, :after{
+    box-sizing:border-box;              /*застосовується для зміни алгоритма розрахунку ширини і висоти елемента*/
+    -moz-box-sizing: border-box;        /*Те саме для Firefox*/
+    -webkit-box-sizing: border-box;     /*Safari до версії 5.0, Chrome до версії 10.0, Android до версії 4.0 і iOS Safari до версії 5.0*/
+}
+
+/*Видаляємо лінії обводки у деяких браузерів*/
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+
+/*Робимо вказані нижче теги блочними*/
+nav, footer, header, aside{display:block;}
+
+/*Урівнюємо поведінку шрифтів та елементів для різних браузерів*/
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {font-family: inherit;}
+
+/*псевдоелемент, котрий видаляє хрестик із форми вводу у браузері Internet Explorer*/
+input::-ms-clear {display: none;} 
+
+button {
+    color: inherit;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
+/*Псевдоелемент, котрий видаляє лишні відступи і пропуски у браузері Firefox*/
+/*В даному випадку застосований до кнопки*/
+button::-moz-focus-inner { padding: 0; border: 0;}
+
+a,a:visited {
+    text-decoration: none;
+}
+a:hover {text-decoration: none;}
+ul, li {list-style: none;}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}

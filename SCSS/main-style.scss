@@ -1,0 +1,36 @@
+@import "../SCSS/reset"; // обнулення стилів
+
+// VARIABLES
+:root{
+    --block-box-shadow: 0px 0px 4px 0px #000;
+}
+
+// Підключення шрифтів
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Condensed&display=swap');
+
+body {
+    font-family: "Scada", sans-serif;
+}
+
+.none {
+    display: none !important;
+}
+
+// COMMON BLOCKS
+@import "./container"; 
+@import "./section";
+@import "./main-wrapper";
+
+// HEADER
+@import "../SCSS/blocks/header/header";
+
+// MAIN
+@import "../SCSS/blocks/main/main";
+@import "./blocks/main/task-list";
+@import "./buttons";
+@import "./blocks/main/form-block";
+@import "./blocks/main/form";
+
+// FOOTER
+@import "./blocks/footer/footer";
